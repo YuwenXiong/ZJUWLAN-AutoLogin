@@ -17,7 +17,7 @@
 {
     // Insert code here to initialize your application
     _statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    [_statusBar setTitle:@"Z"];
+    [_statusBar setImage:[NSImage imageNamed:@"icon_16x16@2x.png"]];
     [_statusBar setMenu:self.statusMenu];
     [_statusBar setHighlightMode:YES];
 //    []

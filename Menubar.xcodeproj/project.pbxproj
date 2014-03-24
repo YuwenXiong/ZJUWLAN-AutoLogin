@@ -27,6 +27,8 @@
 		CC66854818DDE23000986896 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66854718DDE23000986896 /* PreferenceController.m */; };
 		CC66854B18DDE2A000986896 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66854A18DDE2A000986896 /* AppController.m */; };
 		CC66854D18DDE3C400986896 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC66854C18DDE3C400986896 /* Preferences.xib */; };
+		CC92F43F18E01919006AC4B7 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CC58CA3818E00EB700E021CD /* Sparkle.framework */; };
+		CC92F44118E03DB9006AC4B7 /* icon_16x16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC92F44018E03DB9006AC4B7 /* icon_16x16@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CC92F43F18E01919006AC4B7 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 		CC66854918DDE2A000986896 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		CC66854A18DDE2A000986896 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		CC66854C18DDE3C400986896 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		CC92F44018E03DB9006AC4B7 /* icon_16x16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_16x16@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		CC1BDB1018DBE61A0033A161 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC92F44018E03DB9006AC4B7 /* icon_16x16@2x.png */,
 				CC50168918DFF88000EC8505 /* dsa_pub.pem */,
 				CC1BDB1118DBE61A0033A161 /* Menubar-Info.plist */,
 				CC1BDB1218DBE61A0033A161 /* InfoPlist.strings */,
@@ -279,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC92F44118E03DB9006AC4B7 /* icon_16x16@2x.png in Resources */,
 				CC1BDB1418DBE61A0033A161 /* InfoPlist.strings in Resources */,
 				CC50168A18DFF88000EC8505 /* dsa_pub.pem in Resources */,
 				CC1BDB2218DBE61A0033A161 /* Images.xcassets in Resources */,
