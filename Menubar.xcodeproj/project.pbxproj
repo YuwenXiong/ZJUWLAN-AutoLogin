@@ -18,10 +18,9 @@
 		CC1BDB2A18DBE61A0033A161 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1BDB0918DBE61A0033A161 /* Cocoa.framework */; };
 		CC1BDB3218DBE61A0033A161 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1BDB3018DBE61A0033A161 /* InfoPlist.strings */; };
 		CC1BDB3418DBE61A0033A161 /* MenubarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BDB3318DBE61A0033A161 /* MenubarTests.m */; };
-		CC50168418DFF5FA00EC8505 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC50168318DFF5FA00EC8505 /* Sparkle.framework */; };
-		CC50168818DFF6BB00EC8505 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CC50168318DFF5FA00EC8505 /* Sparkle.framework */; };
 		CC50168A18DFF88000EC8505 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = CC50168918DFF88000EC8505 /* dsa_pub.pem */; };
 		CC50169A18E0087600EC8505 /* icon1024.iconset in Resources */ = {isa = PBXBuildFile; fileRef = CC50169918E0087600EC8505 /* icon1024.iconset */; };
+		CC58CA3918E00EB700E021CD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC58CA3818E00EB700E021CD /* Sparkle.framework */; };
 		CC6684FD18DD771D00986896 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6684FC18DD771D00986896 /* PreferencePanes.framework */; };
 		CC66854818DDE23000986896 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66854718DDE23000986896 /* PreferenceController.m */; };
 		CC66854B18DDE2A000986896 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66854A18DDE2A000986896 /* AppController.m */; };
@@ -45,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CC50168818DFF6BB00EC8505 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +69,9 @@
 		CC1BDB2F18DBE61A0033A161 /* MenubarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenubarTests-Info.plist"; sourceTree = "<group>"; };
 		CC1BDB3118DBE61A0033A161 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC1BDB3318DBE61A0033A161 /* MenubarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenubarTests.m; sourceTree = "<group>"; };
-		CC50168318DFF5FA00EC8505 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CC50168918DFF88000EC8505 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		CC50169918E0087600EC8505 /* icon1024.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon1024.iconset; sourceTree = "<group>"; };
+		CC58CA3818E00EB700E021CD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CC6684FC18DD771D00986896 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		CC66854618DDE23000986896 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		CC66854718DDE23000986896 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
@@ -88,7 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6684FD18DD771D00986896 /* PreferencePanes.framework in Frameworks */,
-				CC50168418DFF5FA00EC8505 /* Sparkle.framework in Frameworks */,
+				CC58CA3918E00EB700E021CD /* Sparkle.framework in Frameworks */,
 				CC1BDB0A18DBE61A0033A161 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +126,7 @@
 		CC1BDB0818DBE61A0033A161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CC50168318DFF5FA00EC8505 /* Sparkle.framework */,
+				CC58CA3818E00EB700E021CD /* Sparkle.framework */,
 				CC6684FC18DD771D00986896 /* PreferencePanes.framework */,
 				CC1BDB0918DBE61A0033A161 /* Cocoa.framework */,
 				CC1BDB2818DBE61A0033A161 /* XCTest.framework */,
@@ -435,8 +433,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/orpine/Downloads/Arkham/Sparkle,
-					1.5b6,
+					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -453,8 +450,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/orpine/Downloads/Arkham/Sparkle,
-					1.5b6,
+					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

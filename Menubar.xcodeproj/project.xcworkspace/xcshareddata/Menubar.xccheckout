@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1E1A6B5D-4915-4724-A26A-FA0A5EA63A38</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Menubar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>043E42B2-448D-4EFD-88A9-5CFA12DCCACD</key>
+		<string>https://github.com/Orpine/ZJUWLAN-AutoLogin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Menubar.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>043E42B2-448D-4EFD-88A9-5CFA12DCCACD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Orpine/ZJUWLAN-AutoLogin.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>043E42B2-448D-4EFD-88A9-5CFA12DCCACD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>043E42B2-448D-4EFD-88A9-5CFA12DCCACD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZJUWLAN AutoLogin</string>
+		</dict>
+	</array>
+</dict>
+</plist>
