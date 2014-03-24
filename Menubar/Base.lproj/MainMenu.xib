@@ -676,13 +676,19 @@
                 <menuItem title="Preferences…" id="BOF-NM-1cW" propertyAccessControl="none">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="showPreferencePanel:" target="HhQ-p0-WTT" id="HLy-NZ-sDN"/>
+                        <action selector="showPreferencePanel:" target="HhQ-p0-WTT" id="ESq-PP-hNg"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Check for updates..." id="pZd-pF-rR4">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="checkForUpdates:" target="UYp-dR-OV1" id="ebt-dL-YKx"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="About..." id="S9D-Yd-8sb">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showAboutPanel:" target="HhQ-p0-WTT" id="2Vu-Gv-rjj"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="2pD-qS-6W7">

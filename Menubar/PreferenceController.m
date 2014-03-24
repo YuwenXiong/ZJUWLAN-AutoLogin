@@ -33,7 +33,7 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    NSLog(@"Nib file is loaded");
+//    NSLog(@"Nib file is loaded");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults synchronize];
     NSString *username = [defaults valueForKey:@"username"];

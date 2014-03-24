@@ -9,12 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class PreferenceController;
+@class AboutController;
 
 @interface AppController : NSObject
 {
     PreferenceController *preferenceController;
+    AboutController *aboutController;
 }
 
 - (IBAction)showPreferencePanel:(id)sender;
+- (IBAction)showAboutPanel:(id)sender;
 
 @end
