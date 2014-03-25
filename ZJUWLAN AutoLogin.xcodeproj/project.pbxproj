@@ -55,23 +55,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CC1BDB0618DBE61A0033A161 /* Menubar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menubar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1BDB0618DBE61A0033A161 /* ZJUWLAN AutoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZJUWLAN AutoLogin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1BDB0918DBE61A0033A161 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CC1BDB0C18DBE61A0033A161 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CC1BDB0D18DBE61A0033A161 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CC1BDB0E18DBE61A0033A161 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CC1BDB1118DBE61A0033A161 /* Menubar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Menubar-Info.plist"; sourceTree = "<group>"; };
+		CC1BDB1118DBE61A0033A161 /* ZJUWLAN AutoLogin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZJUWLAN AutoLogin-Info.plist"; sourceTree = "<group>"; };
 		CC1BDB1318DBE61A0033A161 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC1BDB1518DBE61A0033A161 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CC1BDB1718DBE61A0033A161 /* Menubar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menubar-Prefix.pch"; sourceTree = "<group>"; };
+		CC1BDB1718DBE61A0033A161 /* ZJUWLAN AutoLogin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJUWLAN AutoLogin-Prefix.pch"; sourceTree = "<group>"; };
 		CC1BDB1918DBE61A0033A161 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		CC1BDB1B18DBE61A0033A161 /* MenubarAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenubarAppDelegate.h; sourceTree = "<group>"; };
 		CC1BDB1C18DBE61A0033A161 /* MenubarAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenubarAppDelegate.m; sourceTree = "<group>"; };
 		CC1BDB1F18DBE61A0033A161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CC1BDB2118DBE61A0033A161 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CC1BDB2718DBE61A0033A161 /* MenubarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenubarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1BDB2718DBE61A0033A161 /* ZJUWLAN AutoLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZJUWLAN AutoLoginTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1BDB2818DBE61A0033A161 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		CC1BDB2F18DBE61A0033A161 /* MenubarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenubarTests-Info.plist"; sourceTree = "<group>"; };
+		CC1BDB2F18DBE61A0033A161 /* ZJUWLAN AutoLoginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZJUWLAN AutoLoginTests-Info.plist"; sourceTree = "<group>"; };
 		CC1BDB3118DBE61A0033A161 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC1BDB3318DBE61A0033A161 /* MenubarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenubarTests.m; sourceTree = "<group>"; };
 		CC50168918DFF88000EC8505 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 		CC1BDB0718DBE61A0033A161 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC1BDB0618DBE61A0033A161 /* Menubar.app */,
-				CC1BDB2718DBE61A0033A161 /* MenubarTests.xctest */,
+				CC1BDB0618DBE61A0033A161 /* ZJUWLAN AutoLogin.app */,
+				CC1BDB2718DBE61A0033A161 /* ZJUWLAN AutoLoginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,10 +179,10 @@
 			children = (
 				CC92F44018E03DB9006AC4B7 /* icon_16x16@2x.png */,
 				CC50168918DFF88000EC8505 /* dsa_pub.pem */,
-				CC1BDB1118DBE61A0033A161 /* Menubar-Info.plist */,
+				CC1BDB1118DBE61A0033A161 /* ZJUWLAN AutoLogin-Info.plist */,
 				CC1BDB1218DBE61A0033A161 /* InfoPlist.strings */,
 				CC1BDB1518DBE61A0033A161 /* main.m */,
-				CC1BDB1718DBE61A0033A161 /* Menubar-Prefix.pch */,
+				CC1BDB1718DBE61A0033A161 /* ZJUWLAN AutoLogin-Prefix.pch */,
 				CC1BDB1818DBE61A0033A161 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -200,7 +200,7 @@
 		CC1BDB2E18DBE61A0033A161 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC1BDB2F18DBE61A0033A161 /* MenubarTests-Info.plist */,
+				CC1BDB2F18DBE61A0033A161 /* ZJUWLAN AutoLoginTests-Info.plist */,
 				CC1BDB3018DBE61A0033A161 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -209,9 +209,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC1BDB0518DBE61A0033A161 /* Menubar */ = {
+		CC1BDB0518DBE61A0033A161 /* ZJUWLAN AutoLogin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC1BDB3718DBE61A0033A161 /* Build configuration list for PBXNativeTarget "Menubar" */;
+			buildConfigurationList = CC1BDB3718DBE61A0033A161 /* Build configuration list for PBXNativeTarget "ZJUWLAN AutoLogin" */;
 			buildPhases = (
 				CC1BDB0218DBE61A0033A161 /* Sources */,
 				CC1BDB0318DBE61A0033A161 /* Frameworks */,
@@ -222,14 +222,14 @@
 			);
 			dependencies = (
 			);
-			name = Menubar;
+			name = "ZJUWLAN AutoLogin";
 			productName = Menubar;
-			productReference = CC1BDB0618DBE61A0033A161 /* Menubar.app */;
+			productReference = CC1BDB0618DBE61A0033A161 /* ZJUWLAN AutoLogin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC1BDB2618DBE61A0033A161 /* MenubarTests */ = {
+		CC1BDB2618DBE61A0033A161 /* ZJUWLAN AutoLoginTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC1BDB3A18DBE61A0033A161 /* Build configuration list for PBXNativeTarget "MenubarTests" */;
+			buildConfigurationList = CC1BDB3A18DBE61A0033A161 /* Build configuration list for PBXNativeTarget "ZJUWLAN AutoLoginTests" */;
 			buildPhases = (
 				CC1BDB2318DBE61A0033A161 /* Sources */,
 				CC1BDB2418DBE61A0033A161 /* Frameworks */,
@@ -240,9 +240,9 @@
 			dependencies = (
 				CC1BDB2C18DBE61A0033A161 /* PBXTargetDependency */,
 			);
-			name = MenubarTests;
+			name = "ZJUWLAN AutoLoginTests";
 			productName = MenubarTests;
-			productReference = CC1BDB2718DBE61A0033A161 /* MenubarTests.xctest */;
+			productReference = CC1BDB2718DBE61A0033A161 /* ZJUWLAN AutoLoginTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CC1BDB0118DBE61A0033A161 /* Build configuration list for PBXProject "Menubar" */;
+			buildConfigurationList = CC1BDB0118DBE61A0033A161 /* Build configuration list for PBXProject "ZJUWLAN AutoLogin" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -273,8 +273,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC1BDB0518DBE61A0033A161 /* Menubar */,
-				CC1BDB2618DBE61A0033A161 /* MenubarTests */,
+				CC1BDB0518DBE61A0033A161 /* ZJUWLAN AutoLogin */,
+				CC1BDB2618DBE61A0033A161 /* ZJUWLAN AutoLoginTests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,7 +332,7 @@
 /* Begin PBXTargetDependency section */
 		CC1BDB2C18DBE61A0033A161 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC1BDB0518DBE61A0033A161 /* Menubar */;
+			target = CC1BDB0518DBE61A0033A161 /* ZJUWLAN AutoLogin */;
 			targetProxy = CC1BDB2B18DBE61A0033A161 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -453,9 +453,9 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Menubar/Menubar-Prefix.pch";
-				INFOPLIST_FILE = "Menubar/Menubar-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Menubar/ZJUWLAN AutoLogin-Prefix.pch";
+				INFOPLIST_FILE = "Menubar/ZJUWLAN AutoLogin-Info.plist";
+				PRODUCT_NAME = "ZJUWLAN AutoLogin";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -470,9 +470,9 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Menubar/Menubar-Prefix.pch";
-				INFOPLIST_FILE = "Menubar/Menubar-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Menubar/ZJUWLAN AutoLogin-Prefix.pch";
+				INFOPLIST_FILE = "Menubar/ZJUWLAN AutoLogin-Info.plist";
+				PRODUCT_NAME = "ZJUWLAN AutoLogin";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -492,8 +492,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MenubarTests/MenubarTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MenubarTests/ZJUWLAN AutoLoginTests-Info.plist";
+				PRODUCT_NAME = "ZJUWLAN AutoLoginTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -510,8 +510,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menubar/Menubar-Prefix.pch";
-				INFOPLIST_FILE = "MenubarTests/MenubarTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MenubarTests/ZJUWLAN AutoLoginTests-Info.plist";
+				PRODUCT_NAME = "ZJUWLAN AutoLoginTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -520,7 +520,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC1BDB0118DBE61A0033A161 /* Build configuration list for PBXProject "Menubar" */ = {
+		CC1BDB0118DBE61A0033A161 /* Build configuration list for PBXProject "ZJUWLAN AutoLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC1BDB3518DBE61A0033A161 /* Debug */,
@@ -529,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC1BDB3718DBE61A0033A161 /* Build configuration list for PBXNativeTarget "Menubar" */ = {
+		CC1BDB3718DBE61A0033A161 /* Build configuration list for PBXNativeTarget "ZJUWLAN AutoLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC1BDB3818DBE61A0033A161 /* Debug */,
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC1BDB3A18DBE61A0033A161 /* Build configuration list for PBXNativeTarget "MenubarTests" */ = {
+		CC1BDB3A18DBE61A0033A161 /* Build configuration list for PBXNativeTarget "ZJUWLAN AutoLoginTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC1BDB3B18DBE61A0033A161 /* Debug */,

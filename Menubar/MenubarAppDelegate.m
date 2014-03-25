@@ -102,6 +102,8 @@
 //    NSLog(@"%@", mess);
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     notification.title = @"ZJUWLAN";
+    notification.informativeText = @"请稍后";
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     mess = [self dealMess:mess];
     notification.informativeText = mess;
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];

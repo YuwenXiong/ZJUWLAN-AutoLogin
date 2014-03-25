@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CC1BDB0518DBE61A0033A161"
-               BuildableName = "Menubar.app"
-               BlueprintName = "Menubar"
-               ReferencedContainer = "container:Menubar.xcodeproj">
+               BuildableName = "ZJUWLAN AutoLogin.app"
+               BlueprintName = "ZJUWLAN AutoLogin"
+               ReferencedContainer = "container:ZJUWLAN AutoLogin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CC1BDB2618DBE61A0033A161"
-               BuildableName = "MenubarTests.xctest"
-               BlueprintName = "MenubarTests"
-               ReferencedContainer = "container:Menubar.xcodeproj">
+               BuildableName = "ZJUWLAN AutoLoginTests.xctest"
+               BlueprintName = "ZJUWLAN AutoLoginTests"
+               ReferencedContainer = "container:ZJUWLAN AutoLogin.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC1BDB0518DBE61A0033A161"
-            BuildableName = "Menubar.app"
-            BlueprintName = "Menubar"
-            ReferencedContainer = "container:Menubar.xcodeproj">
+            BuildableName = "ZJUWLAN AutoLogin.app"
+            BlueprintName = "ZJUWLAN AutoLogin"
+            ReferencedContainer = "container:ZJUWLAN AutoLogin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC1BDB0518DBE61A0033A161"
-            BuildableName = "Menubar.app"
-            BlueprintName = "Menubar"
-            ReferencedContainer = "container:Menubar.xcodeproj">
+            BuildableName = "ZJUWLAN AutoLogin.app"
+            BlueprintName = "ZJUWLAN AutoLogin"
+            ReferencedContainer = "container:ZJUWLAN AutoLogin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC1BDB0518DBE61A0033A161"
-            BuildableName = "Menubar.app"
-            BlueprintName = "Menubar"
-            ReferencedContainer = "container:Menubar.xcodeproj">
+            BuildableName = "ZJUWLAN AutoLogin.app"
+            BlueprintName = "ZJUWLAN AutoLogin"
+            ReferencedContainer = "container:ZJUWLAN AutoLogin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
