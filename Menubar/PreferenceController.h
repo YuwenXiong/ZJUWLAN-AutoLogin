@@ -13,6 +13,7 @@
 @property (weak) IBOutlet NSSecureTextField *password;
 - (IBAction)saveInfo:(id)sender;
 @property (weak) IBOutlet NSTextField *notification;
+@property (weak) IBOutlet NSButton *checkBox;
 
 //- (IBAction)changeBackgroundColor:(id)sender;
 //- (IBAction)changeNewEmptyDoc:(id)sender;

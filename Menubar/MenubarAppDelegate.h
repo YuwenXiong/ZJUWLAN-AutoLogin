@@ -9,10 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 #import "Sparkle/Sparkle.h"
+#import "Reachability.h"
 
 @interface MenubarAppDelegate : NSObject <NSApplicationDelegate>
 {
     NSDictionary *userDefaults;
+    Reachability  *hostReach;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -22,5 +24,5 @@
 @property (nonatomic, retain) NSDictionary *userDefaults;
 - (IBAction)ConnectZJUWLAN:(id)sender;
 - (NSString *)setupConnection;
-- (void)connecting;
+- (void)connecting:(BOOL)isClick;
 @end

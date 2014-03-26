@@ -21,6 +21,8 @@
 		CC50168A18DFF88000EC8505 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = CC50168918DFF88000EC8505 /* dsa_pub.pem */; };
 		CC50169A18E0087600EC8505 /* icon1024.iconset in Resources */ = {isa = PBXBuildFile; fileRef = CC50169918E0087600EC8505 /* icon1024.iconset */; };
 		CC51376118E2E59F001A9140 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC51376018E2E59F001A9140 /* Carbon.framework */; };
+		CC51376418E32180001A9140 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC51376318E32180001A9140 /* Reachability.m */; };
+		CC51376618E32214001A9140 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC51376518E32214001A9140 /* SystemConfiguration.framework */; };
 		CC58CA3918E00EB700E021CD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC58CA3818E00EB700E021CD /* Sparkle.framework */; };
 		CC58CA3B18E00F8500E021CD /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58CA3A18E00F8500E021CD /* About.xib */; };
 		CC58CA3E18E012F600E021CD /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58CA3D18E012F600E021CD /* AboutController.m */; };
@@ -78,6 +80,9 @@
 		CC50168918DFF88000EC8505 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		CC50169918E0087600EC8505 /* icon1024.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon1024.iconset; sourceTree = "<group>"; };
 		CC51376018E2E59F001A9140 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		CC51376218E32180001A9140 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CC51376318E32180001A9140 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		CC51376518E32214001A9140 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CC58CA3818E00EB700E021CD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CC58CA3A18E00F8500E021CD /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		CC58CA3C18E012F600E021CD /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC51376618E32214001A9140 /* SystemConfiguration.framework in Frameworks */,
 				CC51376118E2E59F001A9140 /* Carbon.framework in Frameworks */,
 				CC6684FD18DD771D00986896 /* PreferencePanes.framework in Frameworks */,
 				CC58CA3918E00EB700E021CD /* Sparkle.framework in Frameworks */,
@@ -138,6 +144,7 @@
 		CC1BDB0818DBE61A0033A161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC51376518E32214001A9140 /* SystemConfiguration.framework */,
 				CC51376018E2E59F001A9140 /* Carbon.framework */,
 				CC58CA3818E00EB700E021CD /* Sparkle.framework */,
 				CC6684FC18DD771D00986896 /* PreferencePanes.framework */,
@@ -163,6 +170,8 @@
 			children = (
 				CC1BDB1B18DBE61A0033A161 /* MenubarAppDelegate.h */,
 				CC1BDB1C18DBE61A0033A161 /* MenubarAppDelegate.m */,
+				CC51376218E32180001A9140 /* Reachability.h */,
+				CC51376318E32180001A9140 /* Reachability.m */,
 				CC1BDB1E18DBE61A0033A161 /* MainMenu.xib */,
 				CC58CA3A18E00F8500E021CD /* About.xib */,
 				CC66854618DDE23000986896 /* PreferenceController.h */,
@@ -319,6 +328,7 @@
 				CC1BDB1D18DBE61A0033A161 /* MenubarAppDelegate.m in Sources */,
 				CC66854818DDE23000986896 /* PreferenceController.m in Sources */,
 				CC58CA3E18E012F600E021CD /* AboutController.m in Sources */,
+				CC51376418E32180001A9140 /* Reachability.m in Sources */,
 				CC66854B18DDE2A000986896 /* AppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

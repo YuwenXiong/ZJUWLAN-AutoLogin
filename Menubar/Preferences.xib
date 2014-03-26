@@ -6,6 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferenceController">
             <connections>
+                <outlet property="checkBox" destination="SiC-mE-IMo" id="Qt3-1C-zpY"/>
                 <outlet property="notification" destination="cQj-a4-L82" id="Wa8-wN-qk6"/>
                 <outlet property="password" destination="MgI-v6-LwN" id="EoX-QO-Wq7"/>
                 <outlet property="username" destination="FqC-Vz-CSS" id="fue-8S-eoa"/>
@@ -20,14 +21,14 @@
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="2Pe-ii-Wrm" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="540" y="420" width="360" height="180"/>
+            <rect key="contentRect" x="540" y="420" width="360" height="210"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="EdR-4H-Bou">
-                <rect key="frame" x="0.0" y="0.0" width="360" height="180"/>
+                <rect key="frame" x="0.0" y="0.0" width="360" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-v6-LwN">
-                        <rect key="frame" x="116" y="93" width="163" height="22"/>
+                        <rect key="frame" x="116" y="123" width="163" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="ZgJ-8c-Rhm">
                             <font key="font" metaFont="system"/>
@@ -39,7 +40,7 @@
                         </secureTextFieldCell>
                     </secureTextField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FqC-Vz-CSS">
-                        <rect key="frame" x="116" y="138" width="163" height="22"/>
+                        <rect key="frame" x="116" y="168" width="163" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Uwm-Al-nL5">
                             <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="3Ub-re-v1c"/>
@@ -49,7 +50,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTW-pG-ant">
-                        <rect key="frame" x="99" y="50" width="163" height="19"/>
+                        <rect key="frame" x="99" y="44" width="163" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundRect" title="保存" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kbe-Ks-EXI">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -63,7 +64,7 @@ DQ
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-e5-Pok">
-                        <rect key="frame" x="67" y="141" width="30" height="17"/>
+                        <rect key="frame" x="67" y="171" width="30" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="学号" id="Xjp-rT-mFu">
                             <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -72,7 +73,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-8c-n6c">
-                        <rect key="frame" x="67" y="95" width="30" height="17"/>
+                        <rect key="frame" x="67" y="125" width="30" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="密码" id="tS4-va-ad4">
                             <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -89,8 +90,17 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-mE-IMo">
+                        <rect key="frame" x="88" y="81" width="184" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="连接到ZJUWLAN时自动登录" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rLt-mn-3fz">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="VCl-fz-rtq"/>
     </objects>
 </document>

@@ -33,17 +33,29 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     //注册快捷键事件
     InstallApplicationEventHandler(&myHotKeyHandler,1,&eventType, (__bridge void *)self,NULL);
     
-    myHotKeyID.signature='mhk1';
+    myHotKeyID.signature='hk1';
     myHotKeyID.id=1;
     //注册EventHandler
     RegisterEventHotKey(kVK_ANSI_C, controlKey + cmdKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
-    NSLog(@"awake");
+//    NSLog(@"awake");
 
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@",[defaults valueForKey:@"autoLogin"]);
+    BOOL p = [defaults valueForKey:@"autoLogin"];
+    if (p) {
+        // 监测网络情况
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(reachabilityChanged:)
+                                                     name: kReachabilityChangedNotification
+                                                   object: nil];
+        hostReach = [Reachability reachabilityWithHostName:@"https://net.zju.edu.cn/srun_port1.php"];
+        [hostReach startNotifier];
+    }
 }
 
 OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void  *userData){
-    NSLog(@"call hot key %@", userData);
-    [(MenubarAppDelegate *)[NSApp delegate] connecting];
+//    NSLog(@"call hot key %@", userData);
+    [(MenubarAppDelegate *)[NSApp delegate] connecting:YES];
     return noErr;
 }
 
@@ -112,14 +124,15 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     return mess;
 }
 
-- (void)connecting
+- (void)connecting:(BOOL) isClick
 {
+    
     NSString *mess = [self setupConnection];
     //    NSLog(@"%@", mess);
+    
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     notification.title = @"ZJUWLAN";
-    notification.informativeText = @"请稍后";
-    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    
     //    NSLog(@"%@", mess);
     mess = [self dealMess:mess];
     if ([mess isEqualToString:@"您已在线，请注销后再登录。"] == YES) {
@@ -138,14 +151,28 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
         mess = [self dealMess:mess];
         notification.informativeText = mess;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    } else if(isClick == NO && [mess isEqualToString:@"您的ip异常，请断开wifi后重新连接"] == YES) {
+        
     } else {
         notification.informativeText = mess;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+        NSLog(@"%@", mess);
+
     }
 }
 
 
 - (IBAction)ConnectZJUWLAN:(id)sender {
-    [self connecting];
+    [self connecting:YES];
 }
+
+- (void)reachabilityChanged:(NSNotification *)note {
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    NetworkStatus status = [curReach currentReachabilityStatus];
+    if (status == 0) {
+        [self connecting:NO];
+    }
+}
+
 @end
