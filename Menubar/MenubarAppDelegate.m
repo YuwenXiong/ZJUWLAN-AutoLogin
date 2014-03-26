@@ -8,6 +8,7 @@
 
 #import "MenubarAppDelegate.h"
 
+OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
 @implementation MenubarAppDelegate
 
 @synthesize statusBar = _statusBar;
@@ -20,18 +21,31 @@
     [_statusBar setImage:[NSImage imageNamed:@"icon_16x16@2x.png"]];
     [_statusBar setMenu:self.statusMenu];
     [_statusBar setHighlightMode:YES];
-//    []
+
+    //注册事件
+    EventHotKeyRef myHotKeyRef;
+    EventHotKeyID myHotKeyID;
+    EventTypeSpec eventType;
+    
+    //注册对应的事件，如键盘按钮
+    eventType.eventClass=kEventClassKeyboard;
+    eventType.eventKind=kEventHotKeyPressed;
+    //注册快捷键事件
+    InstallApplicationEventHandler(&myHotKeyHandler,1,&eventType, (__bridge void *)self,NULL);
+    
+    myHotKeyID.signature='mhk1';
+    myHotKeyID.id=1;
+    //注册EventHandler
+    RegisterEventHotKey(kVK_ANSI_C, controlKey + cmdKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
+    NSLog(@"awake");
+
 }
 
-
-/*- (void)awakeFromNib
-{
-    self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    self.statusBar.title = @"ZJUWLAN";
-    self.statusBar.menu = self.statusMenu;
-    self.statusBar.highlightMode = YES;
+OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void  *userData){
+    NSLog(@"call hot key %@", userData);
+    [(MenubarAppDelegate *)[NSApp delegate] connecting];
+    return noErr;
 }
-*/
 
 - (NSString *)setupConnection
 {
@@ -89,39 +103,49 @@
     NSString *ok = @"<script language=\"javascript\">location=\"/srun_portal.html?action=login_ok\";</script> ";
     if ([mess isEqualToString:ok]) {
 //        NSLog(@"ok");
-        return @"成功登陆";
+        return @"成功登录";
     } else if ([mess isEqualToString:@"ok"]) {
         return @"成功远程注销";
+    } else if ([mess isEqualToString:@""] || [mess isEqualToString:nil]) {
+        return @"网络未就绪，请重试";
     }
     return mess;
 }
 
-- (IBAction)ConnectZJUWLAN:(id)sender {
-    
+- (void)connecting
+{
     NSString *mess = [self setupConnection];
-//    NSLog(@"%@", mess);
+    //    NSLog(@"%@", mess);
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     notification.title = @"ZJUWLAN";
     notification.informativeText = @"请稍后";
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    //    NSLog(@"%@", mess);
     mess = [self dealMess:mess];
-    notification.informativeText = mess;
-    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-
     if ([mess isEqualToString:@"您已在线，请注销后再登录。"] == YES) {
+        notification.informativeText = @"您已在线，将远程注销。";
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
         mess = [self forceLogout];
-//        NSLog(@"%@", mess);
-//        NSLog(@"%@", [self dealMess:mess]);
+        //        NSLog(@"%@", mess);
+        //        NSLog(@"%@", [self dealMess:mess]);
         mess = [self dealMess:mess];
         notification.informativeText = mess;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
         
         mess = [self setupConnection];
-//        NSLog(@"mess");
-//        NSLog(@"%@", [self dealMess:mess]);
+        //        NSLog(@"mess");
+        //        NSLog(@"%@", [self dealMess:mess]);
         mess = [self dealMess:mess];
         notification.informativeText = mess;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    } else {
+        notification.informativeText = mess;
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     }
+}
+
+
+- (IBAction)ConnectZJUWLAN:(id)sender {
+    [self connecting];
 }
 @end

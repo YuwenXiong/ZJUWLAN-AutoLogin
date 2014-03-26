@@ -9,6 +9,7 @@
 #import "AppController.h"
 #import "PreferenceController.h"
 #import "AboutController.h"
+
 @implementation AppController
 
 - (IBAction)showPreferencePanel:(id)sender
@@ -23,5 +24,6 @@
 //    NSLog(@"showing %@", aboutController);
     [aboutController showWindow:self];
 }
+
 
 @end

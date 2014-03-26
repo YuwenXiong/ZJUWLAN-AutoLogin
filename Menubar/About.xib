@@ -10,14 +10,14 @@
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="7kf-2m-lFO" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="530" y="400" width="380" height="300"/>
+            <rect key="contentRect" x="530" y="400" width="387" height="351"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="wss-ic-LQ8">
-                <rect key="frame" x="0.0" y="0.0" width="380" height="300"/>
+                <rect key="frame" x="0.0" y="0.0" width="387" height="351"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brU-aH-THZ">
-                        <rect key="frame" x="83" y="38" width="166" height="17"/>
+                        <rect key="frame" x="107" y="31" width="166" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Copyright © 2014 Orpine" id="gyG-sa-SQK">
                             <font key="font" metaFont="system"/>
@@ -26,7 +26,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ci-Kj-a5K">
-                        <rect key="frame" x="35" y="250" width="226" height="17"/>
+                        <rect key="frame" x="35" y="301" width="226" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ZJUWLAN AutoLogin 是一个开源软件" id="oLI-qD-9xc">
                             <font key="font" metaFont="system"/>
@@ -35,7 +35,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abq-nm-lTW">
-                        <rect key="frame" x="35" y="214" width="165" height="17"/>
+                        <rect key="frame" x="35" y="265" width="165" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="在GitHub上发布，地址为：" id="YwT-Ip-QDd">
                             <font key="font" metaFont="system"/>
@@ -44,7 +44,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2Y-Gb-CZv">
-                        <rect key="frame" x="35" y="173" width="312" height="17"/>
+                        <rect key="frame" x="35" y="224" width="312" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="https://github.com/Orpine/ZJUWLAN-AutoLogin" id="2lH-Bo-439">
                             <font key="font" metaFont="system"/>
@@ -53,7 +53,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4X-4t-Er3">
-                        <rect key="frame" x="35" y="131" width="186" height="17"/>
+                        <rect key="frame" x="35" y="182" width="186" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="如果你有什么问题，请联系我：" id="D92-fw-1U8">
                             <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -62,9 +62,18 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUs-ak-eu4">
-                        <rect key="frame" x="35" y="90" width="116" height="17"/>
+                        <rect key="frame" x="35" y="141" width="116" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="Orpine@msn.com" id="4PF-Ew-yB9">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsL-ai-LMP">
+                        <rect key="frame" x="35" y="97" width="316" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="如果你认为它很好用，请把它推荐给你身边的Mac用户" id="miS-yQ-ChD">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

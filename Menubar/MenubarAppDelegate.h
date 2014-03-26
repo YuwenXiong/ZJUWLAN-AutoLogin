@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Carbon/Carbon.h>
 #import "Sparkle/Sparkle.h"
 
 @interface MenubarAppDelegate : NSObject <NSApplicationDelegate>
@@ -21,5 +22,5 @@
 @property (nonatomic, retain) NSDictionary *userDefaults;
 - (IBAction)ConnectZJUWLAN:(id)sender;
 - (NSString *)setupConnection;
-
+- (void)connecting;
 @end

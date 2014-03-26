@@ -20,6 +20,7 @@
 		CC1BDB3418DBE61A0033A161 /* MenubarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BDB3318DBE61A0033A161 /* MenubarTests.m */; };
 		CC50168A18DFF88000EC8505 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = CC50168918DFF88000EC8505 /* dsa_pub.pem */; };
 		CC50169A18E0087600EC8505 /* icon1024.iconset in Resources */ = {isa = PBXBuildFile; fileRef = CC50169918E0087600EC8505 /* icon1024.iconset */; };
+		CC51376118E2E59F001A9140 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC51376018E2E59F001A9140 /* Carbon.framework */; };
 		CC58CA3918E00EB700E021CD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC58CA3818E00EB700E021CD /* Sparkle.framework */; };
 		CC58CA3B18E00F8500E021CD /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58CA3A18E00F8500E021CD /* About.xib */; };
 		CC58CA3E18E012F600E021CD /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58CA3D18E012F600E021CD /* AboutController.m */; };
@@ -76,6 +77,7 @@
 		CC1BDB3318DBE61A0033A161 /* MenubarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenubarTests.m; sourceTree = "<group>"; };
 		CC50168918DFF88000EC8505 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		CC50169918E0087600EC8505 /* icon1024.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon1024.iconset; sourceTree = "<group>"; };
+		CC51376018E2E59F001A9140 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		CC58CA3818E00EB700E021CD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CC58CA3A18E00F8500E021CD /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		CC58CA3C18E012F600E021CD /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC51376118E2E59F001A9140 /* Carbon.framework in Frameworks */,
 				CC6684FD18DD771D00986896 /* PreferencePanes.framework in Frameworks */,
 				CC58CA3918E00EB700E021CD /* Sparkle.framework in Frameworks */,
 				CC1BDB0A18DBE61A0033A161 /* Cocoa.framework in Frameworks */,
@@ -135,6 +138,7 @@
 		CC1BDB0818DBE61A0033A161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC51376018E2E59F001A9140 /* Carbon.framework */,
 				CC58CA3818E00EB700E021CD /* Sparkle.framework */,
 				CC6684FC18DD771D00986896 /* PreferencePanes.framework */,
 				CC1BDB0918DBE61A0033A161 /* Cocoa.framework */,

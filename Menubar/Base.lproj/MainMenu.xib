@@ -667,31 +667,31 @@
         </menu>
         <menu id="k6E-nX-imT">
             <items>
-                <menuItem title="Connect" id="5iW-aG-hxf">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="连接" keyEquivalent="c" id="5iW-aG-hxf">
+                    <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                     <connections>
                         <action selector="ConnectZJUWLAN:" target="Voe-Tx-rLC" id="wBw-R7-WQ5"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Preferences…" id="BOF-NM-1cW" propertyAccessControl="none">
+                <menuItem title="偏好设置…" id="BOF-NM-1cW" propertyAccessControl="none">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showPreferencePanel:" target="HhQ-p0-WTT" id="ESq-PP-hNg"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Check for updates..." id="pZd-pF-rR4">
+                <menuItem title="检查更新..." id="pZd-pF-rR4">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="checkForUpdates:" target="UYp-dR-OV1" id="ebt-dL-YKx"/>
                     </connections>
                 </menuItem>
-                <menuItem title="About..." id="S9D-Yd-8sb">
+                <menuItem title="关于ZJUWLAN AutoLogin..." id="S9D-Yd-8sb">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showAboutPanel:" target="HhQ-p0-WTT" id="2Vu-Gv-rjj"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Quit" id="2pD-qS-6W7">
+                <menuItem title="退出" id="2pD-qS-6W7">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="terminate:" target="-3" id="cFZ-U6-a8L"/>
