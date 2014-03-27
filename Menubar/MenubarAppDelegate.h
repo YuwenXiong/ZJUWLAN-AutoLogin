@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
+#import <SystemConfiguration/CaptiveNetwork.h>  
 #import "Sparkle/Sparkle.h"
 #import "Reachability.h"
-
+#import "PreferenceController.h"
 @interface MenubarAppDelegate : NSObject <NSApplicationDelegate>
 {
-    NSDictionary *userDefaults;
     Reachability  *hostReach;
 }
 
@@ -25,4 +25,5 @@
 - (IBAction)ConnectZJUWLAN:(id)sender;
 - (NSString *)setupConnection;
 - (void)connecting:(BOOL)isClick;
+- (void)autoLoginOptionChanged:(NSNotification *)note;
 @end

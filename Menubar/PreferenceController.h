@@ -14,7 +14,7 @@
 - (IBAction)saveInfo:(id)sender;
 @property (weak) IBOutlet NSTextField *notification;
 @property (weak) IBOutlet NSButton *checkBox;
+extern NSString* const autoLoginOptionChangedNotification;
+@property (strong) IBOutlet NSPanel *Panel;
 
-//- (IBAction)changeBackgroundColor:(id)sender;
-//- (IBAction)changeNewEmptyDoc:(id)sender;
 @end

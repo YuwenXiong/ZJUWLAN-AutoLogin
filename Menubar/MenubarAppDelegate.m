@@ -7,6 +7,7 @@
 //
 
 #import "MenubarAppDelegate.h"
+#import <netdb.h>
 
 OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
 @implementation MenubarAppDelegate
@@ -38,19 +39,22 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     //注册EventHandler
     RegisterEventHotKey(kVK_ANSI_C, controlKey + cmdKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
 //    NSLog(@"awake");
-
+    // 监测网络情况
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name: kReachabilityChangedNotification
+                                               object: nil];
+    hostReach = [Reachability reachabilityWithHostName:@"https://net.zju.edu.cn/srun_port1.php"];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(autoLoginOptionChanged:)
+                                                 name: autoLoginOptionChangedNotification
+                                               object: nil];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"%@",[defaults valueForKey:@"autoLogin"]);
     BOOL p = [defaults valueForKey:@"autoLogin"];
     if (p) {
-        // 监测网络情况
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(reachabilityChanged:)
-                                                     name: kReachabilityChangedNotification
-                                                   object: nil];
-        hostReach = [Reachability reachabilityWithHostName:@"https://net.zju.edu.cn/srun_port1.php"];
         [hostReach startNotifier];
     }
+
 }
 
 OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void  *userData){
@@ -78,6 +82,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     [url setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [url setURL:[NSURL URLWithString:@"https://net.zju.edu.cn/cgi-bin/srun_portal"]];
     [url setHTTPBody:postData];
+    [url setTimeoutInterval:2.0];
     
     NSData *responseData = [NSURLConnection sendSynchronousRequest:url returningResponse:nil error:nil];
     NSString *mess = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
@@ -123,15 +128,17 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     }
     return mess;
 }
-
 - (void)connecting:(BOOL) isClick
 {
-    
-    NSString *mess = [self setupConnection];
-    //    NSLog(@"%@", mess);
-    
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     notification.title = @"ZJUWLAN";
+    NSString *mess = [self setupConnection];
+    if ([mess isEqualToString:nil]) {
+        notification.informativeText = @"网络未就绪，请重试";
+        return;
+    }
+    //    NSLog(@"%@", mess);
+    
     
     //    NSLog(@"%@", mess);
     mess = [self dealMess:mess];
@@ -172,6 +179,16 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     NetworkStatus status = [curReach currentReachabilityStatus];
     if (status == 0) {
         [self connecting:NO];
+    }
+}
+
+- (void)autoLoginOptionChanged:(NSNotification *)note {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL p = [defaults valueForKey:@"autoLogin"];
+    if (p) {
+        [hostReach startNotifier];
+    } else {
+        [hostReach stopNotifier];
     }
 }
 

@@ -7,9 +7,12 @@
 //
 
 #import "PreferenceController.h"
+#import "MenubarAppDelegate.h"
 @interface PreferenceController ()
 
 @end
+
+NSString * const autoLoginOptionChangedNotification = @"autoLoginOptionChanged";
 
 @implementation PreferenceController
 
@@ -43,15 +46,12 @@
 }
 
 - (IBAction)saveInfo:(id)sender {
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    [userDefault setObject:[_username stringValue] forKey:@"username"];
-    [userDefault setObject:[_password stringValue] forKey:@"password"];
-    [userDefault setBool:[_checkBox state] forKey:@"autoLogin"];
-    [userDefault synchronize];
-//    myDelegate.userDefaults = userDefault;
-    [_notification setStringValue:@"保存成功，请按左上角x关闭面板"];
-//    [self.window orderOut:self];
-}
-- (IBAction)select:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[_username stringValue] forKey:@"username"];
+    [defaults setObject:[_password stringValue] forKey:@"password"];
+    [defaults setBool:[_checkBox state] forKey:@"autoLogin"];
+    [defaults synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:autoLoginOptionChangedNotification object:self];
+    [_Panel orderOut:self];
 }
 @end
