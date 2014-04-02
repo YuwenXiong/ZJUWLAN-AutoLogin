@@ -24,21 +24,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     [_statusBar setHighlightMode:YES];
 
     //注册事件
-    EventHotKeyRef myHotKeyRef;
-    EventHotKeyID myHotKeyID;
-    EventTypeSpec eventType;
-    
-    //注册对应的事件，如键盘按钮
-    eventType.eventClass=kEventClassKeyboard;
-    eventType.eventKind=kEventHotKeyPressed;
-    //注册快捷键事件
-    InstallApplicationEventHandler(&myHotKeyHandler,1,&eventType, (__bridge void *)self,NULL);
-    
-    myHotKeyID.signature='hk1';
-    myHotKeyID.id=1;
-    //注册EventHandler
-    RegisterEventHotKey(kVK_ANSI_C, controlKey + cmdKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
-//    NSLog(@"awake");
+    [self registerHotKey];
     // 监测网络情况
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reachabilityChanged:)
@@ -54,6 +40,32 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     if (p) {
         [hostReach startNotifier];
     }
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
+                                                           selector: @selector(receiveSleepNote:)
+                                                               name: NSWorkspaceWillSleepNotification object: NULL];
+    
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
+                                                           selector: @selector(receiveWakeNote:)
+                                                               name: NSWorkspaceDidWakeNotification object: NULL];
+
+}
+
+- (void) registerHotKey
+{
+    EventHotKeyRef myHotKeyRef;
+    EventHotKeyID myHotKeyID;
+    EventTypeSpec eventType;
+    
+    //注册对应的事件，如键盘按钮
+    eventType.eventClass=kEventClassKeyboard;
+    eventType.eventKind=kEventHotKeyPressed;
+    //注册快捷键事件
+    InstallApplicationEventHandler(&myHotKeyHandler,1,&eventType, (__bridge void *)self,NULL);
+    
+    myHotKeyID.signature='hk1';
+    myHotKeyID.id=1;
+    //注册EventHandler
+    RegisterEventHotKey(kVK_ANSI_C, controlKey + cmdKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
 
 }
 
@@ -61,6 +73,17 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 //    NSLog(@"call hot key %@", userData);
     [(MenubarAppDelegate *)[NSApp delegate] connecting:YES];
     return noErr;
+}
+
+- (void) receiveSleepNote: (NSNotification*) note
+{
+    [hostReach stopNotifier];
+}
+
+- (void) receiveWakeNote: (NSNotification*) note
+{
+    [self registerHotKey];
+    [hostReach startNotifier];
 }
 
 - (NSString *)setupConnection
