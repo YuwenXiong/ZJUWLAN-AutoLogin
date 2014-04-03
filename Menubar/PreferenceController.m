@@ -41,7 +41,7 @@ NSString * const autoLoginOptionChangedNotification = @"autoLoginOptionChanged";
     [defaults synchronize];
     [_username setStringValue:[defaults valueForKey:@"username"]];
     [_password setStringValue:[defaults valueForKey:@"password"]];
-    BOOL p =[defaults valueForKey:@"autoLogin"];
+    BOOL p = (BOOL)[defaults valueForKey:@"autoLogin"];
     [_checkBox setState:p];
 }
 

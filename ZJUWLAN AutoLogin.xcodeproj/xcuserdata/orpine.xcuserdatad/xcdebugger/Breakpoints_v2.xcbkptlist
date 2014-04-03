@@ -155,7 +155,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "216"
             endingLineNumber = "216"
-            landmarkName = "-reachabilityChanged:"
+            landmarkName = "-autoLoginOptionChanged:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -187,8 +187,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "217"
             endingLineNumber = "217"
-            landmarkName = "-reachabilityChanged:"
-            landmarkType = "5">
+            landmarkName = "@implementation MenubarAppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -203,7 +203,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
             endingLineNumber = "213"
-            landmarkName = "-reachabilityChanged:"
+            landmarkName = "-autoLoginOptionChanged:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -219,7 +219,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
             endingLineNumber = "215"
-            landmarkName = "-reachabilityChanged:"
+            landmarkName = "-autoLoginOptionChanged:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

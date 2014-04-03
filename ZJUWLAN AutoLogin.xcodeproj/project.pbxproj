@@ -469,7 +469,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menubar/ZJUWLAN AutoLogin-Prefix.pch";
 				INFOPLIST_FILE = "Menubar/ZJUWLAN AutoLogin-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "ZJUWLAN AutoLogin";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -486,7 +488,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menubar/ZJUWLAN AutoLogin-Prefix.pch";
 				INFOPLIST_FILE = "Menubar/ZJUWLAN AutoLogin-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "ZJUWLAN AutoLogin";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

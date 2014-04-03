@@ -36,7 +36,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
                                                  name: autoLoginOptionChangedNotification
                                                object: nil];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL p = [defaults valueForKey:@"autoLogin"];
+    BOOL p = (BOOL)[defaults valueForKey:@"autoLogin"];
     if (p) {
         [hostReach startNotifier];
     }
@@ -57,13 +57,13 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
     EventTypeSpec eventType;
     
     //注册对应的事件，如键盘按钮
-    eventType.eventClass=kEventClassKeyboard;
-    eventType.eventKind=kEventHotKeyPressed;
+    eventType.eventClass = kEventClassKeyboard;
+    eventType.eventKind = kEventHotKeyPressed;
     //注册快捷键事件
     InstallApplicationEventHandler(&myHotKeyHandler,1,&eventType, (__bridge void *)self,NULL);
     
-    myHotKeyID.signature='hk1';
-    myHotKeyID.id=1;
+    myHotKeyID.signature = 'c';
+    myHotKeyID.id = 1;
     //注册EventHandler
     RegisterEventHotKey(kVK_ANSI_C, controlKey + cmdKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
 
@@ -207,7 +207,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 
 - (void)autoLoginOptionChanged:(NSNotification *)note {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL p = [defaults valueForKey:@"autoLogin"];
+    BOOL p = (BOOL)[defaults valueForKey:@"autoLogin"];
     if (p) {
         [hostReach startNotifier];
     } else {
