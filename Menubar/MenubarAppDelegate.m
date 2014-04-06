@@ -142,7 +142,6 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 {
     NSString *ok = @"<script language=\"javascript\">location=\"/srun_portal.html?action=login_ok\";</script> ";
     if ([mess isEqualToString:ok]) {
-//        NSLog(@"ok");
         return @"成功登录";
     } else if ([mess isEqualToString:@"ok"]) {
         return @"成功远程注销";
@@ -160,28 +159,22 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
         notification.informativeText = @"网络未就绪，请重试";
         return;
     }
-    //    NSLog(@"%@", mess);
     
     
-    //    NSLog(@"%@", mess);
     mess = [self dealMess:mess];
-    if ([mess isEqualToString:@"您已在线，请注销后再登录。"] == YES) {
+    if ([mess isEqualToString:@"您已在线，请注销后再登录。"]) {
         notification.informativeText = @"您已在线，将远程注销。";
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
         mess = [self forceLogout];
-        //        NSLog(@"%@", mess);
-        //        NSLog(@"%@", [self dealMess:mess]);
         mess = [self dealMess:mess];
         notification.informativeText = mess;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
         
         mess = [self setupConnection];
-        //        NSLog(@"mess");
-        //        NSLog(@"%@", [self dealMess:mess]);
         mess = [self dealMess:mess];
         notification.informativeText = mess;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-    } else if(isClick == NO && [mess isEqualToString:@"您的ip异常，请断开wifi后重新连接"] == YES) {
+    } else if(isClick == NO && [mess isEqualToString:@"您的ip异常，请断开wifi后重新连接"]) {
         
     } else {
         notification.informativeText = mess;
